@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Epilogue';
+}
+body {
+    margin: 0; 
+    overflow-x: hidden; 
+}
+a {
+    text-decoration: none;   
+    color: hsl(0, 0%, 41%);  
+    transition: .2s; 
+}
+.dropdown-header:hover, .header-link:hover, #login-button:hover, .register-button:hover {
+    color: hsl(0, 0%, 8%); 
+}
+header {
+    display: flex;  
+    align-items: center; 
+    padding: 1% 4% 0;      
+    gap: 40px; 
+}
+nav {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    color: hsl(0, 0%, 41%); 
+    width: 100%; 
+}
+.dropdown-section {
+    position: relative; 
+}
+.dropdown-header {
+    cursor: pointer; 
+    transition: .2s;
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+    margin: 0; 
+}
+.dropdown-header img{ 
+    transition: .2s;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: .6rem;   
+    position: absolute;
+    background: white; 
+    top: 80%;     
+    left: 0;  
+    padding: 1.4rem;    
+    border-radius: 8px;  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.372);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: .2s; 
+}
+#visible + .dropdown { 
+    opacity: 1;
+    transform: none;
+}
+#visible img { 
+    transform: rotate(180deg);
+}
+.features-dropdown { 
+    left: -65%; 
+}
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 10px;
+}
+.dropdown-link img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain; 
+}
+#links {
+    display: flex;
+    align-items: center;  
+    gap: 40px;
+}
+#buttons {
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+}
+.register-button {
+    padding: 8px 17px;    
+    border-radius: 13px; 
+    border: 1px solid hsl(0, 0%, 8%); 
+    background: transparent;  
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    transition: .2s;  
+}
+#show-menu-button {
+    background: transparent;
+    border: none; 
+    position: absolute;
+    right: 2%; 
+    top: 3%;
+    cursor: pointer; 
+    display: none;
+}
+main {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 88vh;     
+    padding: 2% 0% 5%;    
+}
+#text-section { 
+    padding: 5% 0 0 12%;    
+    width: 50%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between; 
+}
+#page-heading {
+    font-size: 90px;   
+    color: hsl(0, 0%, 8%); 
+    line-height: 80px;   
+    margin: 0;   
+}
+#page-heading span {
+    display: block; 
+} 
+#text-section p {
+    width: 80%;  
+    color: hsl(0, 0%, 41%);
+    margin: 0;   
+}
+.learn-more-button {
+    margin-bottom: 10%; 
+    color: white;
+    padding: 10px 17px; 
+    border: none; 
+    border-radius: 11px;  
+    background: hsl(0, 0%, 8%); 
+    border: 1px solid hsl(0, 0%, 8%);
+    transition: .2s; 
+    cursor: pointer; 
+    font-weight: 700;  
+}
+.learn-more-button:hover {
+    color:hsl(0, 0%, 8%);
+    background-color: white;
+}
+#client-logos {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+}
+#image-section {
+    background: url(images/image-hero-desktop.png);
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-size: contain;         
+    height: 100%; 
+    width: 50%; 
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        gap: 20px; 
+        padding: 0 2%; 
+    }
+    #links {
+        gap: 30px;   
+    }
+    .dropdown { 
+        padding: 1rem;   
+    }
+    #buttons {
+        gap: 20px;   
+    }
+    main {
+        padding: 2% 0% 3%;    
+    }
+    #text-section {  
+        padding: 5% 0 0 2%;    
+    }
+    #page-heading { 
+        font-size: 70px;   
+        line-height: 60px;       
+    }
+    #client-logos * {
+        width: 70px;  
+    }
+}
+@media screen and (max-width: 680px) {
+    header {
+        padding: 2% 2% 0;   
+    }
+    nav {
+        position: absolute;
+        top: 0; 
+        flex-direction: column; 
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 20% 3% 0;  
+        height: 100vh;
+        right: 0;
+        background-color: white; 
+        width: 45vw;   
+        gap: 40px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: .2s; 
+    }
+    .nav-visible {
+        opacity: 1;
+        transform: none;
+    }
+    #links {
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 15px;  
+    }
+    .dropdown {
+        gap: .6rem;   
+        width: 100%; 
+        position: static;
+        background: transparent;  
+        padding: 0rem 1.4rem 0;      
+        border-radius: 0px;  
+        box-shadow: none;
+        opacity: initial;
+        transform: none;
+        transition: .3s;  
+        height: 0;
+        overflow: hidden; 
+    }
+    .features-dropdown { 
+        left: initial;  
+    }
+    #visible + .dropdown { 
+        padding: .6rem 1.4rem 0;      
+        height: 100%; 
+    }
+    #buttons {
+        flex-direction: column;
+        align-items: center; 
+        gap: 10px;
+        width: 100%;
+    }
+    .register-button { 
+        width: 100%;   
+    }
+    #show-menu-button {
+        display: initial; 
+    }
+    main {
+        flex-direction: column-reverse; 
+        height: 80vh; 
+    }
+    #image-section { 
+        width: 100%;
+        height: 50%;   
+        background: url(images/image-hero-mobile.png);
+        background-size: contain; 
+        background-position: center;
+        background-repeat: no-repeat;  
+    }
+    #text-section {
+        width: 100%;
+        height: 50%;
+    }
+    #text-section { 
+        padding: 4% 2%;   
+        align-items: center;  
+        gap: 17px;   
+    }
+    #page-heading {
+        font-size: 50px;   
+        line-height: 50px;   
+        text-align: center; 
+    }
+    #page-heading span {
+        display: initial;  
+    } 
+    #text-section p {
+        width: 100%;   
+        text-align: center; 
+    }
+    .learn-more-button {
+        margin: 0 0 5%;  
+    }
+}

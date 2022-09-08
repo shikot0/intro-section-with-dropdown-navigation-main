@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"> 
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="">
+    <nav> 
+      <div id="links">
+        <div class="dropdown-section">
+          <p class="dropdown-header">Features <img src="images/icon-arrow-down.svg" alt=""></p>
+          <div class="dropdown features-dropdown">
+            <a href="" class="dropdown-link"><img src="images/icon-todo.svg" alt=""> Todo List</a>
+            <a href="" class="dropdown-link"><img src="images/icon-calendar.svg" alt=""> Calendar</a>
+            <a href="" class="dropdown-link"><img src="images/icon-reminders.svg" alt=""> Reminders</a>
+            <a href="" class="dropdown-link"><img src="images/icon-planning.svg" alt=""> Planning</a>
+          </div>   
+        </div>
+        <div class="dropdown-section">
+          <p class="dropdown-header">Company <img src="images/icon-arrow-down.svg" alt=""></p> 
+          <div class="dropdown">
+            <a href="" class="dropdown-link">History</a>
+            <a href="" class="dropdown-link">Our Team</a>
+            <a href="" class="dropdown-link">Blog</a>
+          </div>
+        </div>
+        <a href="" class="header-link">Careers</a> 
+        <a href="" class="header-link">About</a> 
+      </div>
+
+      <div id="buttons"> 
+        <a href="" id="login-button">Login</a>
+        <button class="register-button">Register</button>
+      </div>
+    </nav>
+    <button id="show-menu-button"><img src="images/icon-menu.svg" alt=""></button>
+  </header>
+  <main>
+    <section id="text-section">
+      <h1 id="page-heading"><span>Make</span> remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+      <button class="learn-more-button">Learn more</button>
+      <div id="client-logos">
+        <img src="images/client-databiz.svg" alt="">
+        <img src="images/client-audiophile.svg" alt="">
+        <img src="images/client-meet.svg" alt="">
+        <img src="images/client-maker.svg" alt="">
+      </div> 
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">shikoto</a>. 
+      </div>
+    </section> 
+    <section id="image-section">
+    </section> 
+  </main>
+</body>
+</html>
