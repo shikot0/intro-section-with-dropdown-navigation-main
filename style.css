@@ -266,7 +266,7 @@ main {
     }
     main {
         flex-direction: column-reverse; 
-        height: 80vh; 
+        height: 100vh;  
     }
     #image-section { 
         width: 100%;
