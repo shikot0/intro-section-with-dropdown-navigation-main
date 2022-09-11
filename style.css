@@ -128,10 +128,11 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between; 
+    justify-content: flex-end;
+    gap: 20px;  
 }
-#page-heading {
-    font-size: 70px;    
+#page-heading {  
+    font-size: 75px;    
     color: hsl(0, 0%, 8%); 
     line-height: 65px;    
     margin: 0;   
